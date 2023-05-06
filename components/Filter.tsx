@@ -1,10 +1,38 @@
 import React from "react";
 
-const Filter = () => {
+import EventProps from "@/app/model/dataTypes";
+
+const Filter = ({ locations }: { locations: EventProps[] }) => {
   return (
-    <div className="flex items-center">
-      <img className="h-4" src="./images/filtre.png" />
-      <span className="pl-2">Filtreler</span>
+    <div className="group">
+      <div className="flex items-center my-2 cursor-pointer">
+        <img className="h-4" src="./images/filtre.png" />
+        <span className="pl-2">Filtreler</span>
+      </div>
+      <div className="hidden absolute group-hover:block p-4 border-2 border-slate-200 rounded-sm drop-shadow-[0_4px_50px_0_rgba(81,81,81,0.2)]	">
+        <div className="mb-4">
+          <p className="mb-2">Etkinlik Mekanı</p>
+          <form action="">
+            {locations.map((item: EventProps) => (
+              <>
+                <input type="checkbox" className="peer/draft" id={item.id} />
+                <label className="pl-2 mb-2" htmlFor={item.id}>{item.location}</label>
+                <br />
+              </>
+            ))}
+          </form>
+        </div>
+        <div>
+          <p className="mb-2">Etkinlik Tarihi</p>
+          <form action="">
+            <input type="checkbox" />
+            <label className="pl-2 mb-2" htmlFor="">Güncel Etkinlikler</label>
+            <br />
+            <input type="checkbox" />
+            <label className="pl-2 mb-2" htmlFor="">Geçmiş Etkinlikler</label>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

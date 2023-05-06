@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import Card from "@/components/Card";
+import Theaters from "@/mock/theaters.json";
+import EventProps from "@/app/model/dataTypes";
 
 export default function Home() {
   return (
-    <>
-    <h1>ETKİNLİKLER</h1>
-    </>
-  )
+    <main>
+      <Card theaters={Theaters.results}/>
+    </main>
+  );
 }
