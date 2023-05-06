@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         id={id}
         className="
         block
-        rounded-md
+      
         px-6
         pt-3
         pb-3
@@ -33,7 +33,9 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         invalid:border-b-1
         border-solid
         border-2
-        border-slate-600
+        border-borderColor
+        placeholder:translate-x-8
+        
         "
         placeholder="Etkinlik Ara " 
       />
@@ -55,7 +57,7 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         peer-placeholder-shown:translate-y-0 
         peer-focus:scale-75
         peer-focus:-translate-y-3
-      ">{label}</label>
+      "><img src='./images/Union.png'/></label>
     </div>
   )
 }
