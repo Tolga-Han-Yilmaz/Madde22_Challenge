@@ -1,0 +1,29 @@
+{
+    "genres": [
+      {
+        "id": 9,
+        "name": "Tüm Etkinlikler"
+      },
+      {
+        "id": 10,
+        "name": "Tiyatro"
+      },
+      {
+        "id": 11,
+        "name": "Konser"
+      },
+      {
+        "id": 12,
+        "name": "Stand Up"
+      },
+      {
+        "id": 13,
+        "name": "Sinema"
+      },
+      {
+        "id": 14,
+        "name": "Çocuk"
+      }
+     
+    ]
+  }

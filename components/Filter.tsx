@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import EventProps from "@/app/model/dataTypes";
 
@@ -6,12 +7,12 @@ const Filter = ({ locations }: { locations: EventProps[] }) => {
   return (
     <div className="group ">
       <div className="flex items-center my-2 cursor-pointer">
-        <img className="h-4" src="./images/filtre.png" />
+        <Image className="h-4" src="./images/filtre.png" alt="filter"/>
         <span className="pl-2">Filtreler</span>
       </div>
       <div className="hidden absolute z-40 bg-white group-hover:block p-4 border-2 border-slate-200 rounded-sm drop-shadow-[0_4px_50px_0_rgba(81,81,81,0.2)]	">
         <div className="mb-4">
-          <p className="mb-2">Etkinlik Mekanı</p>
+          <p className="mb-2 font-bold">Etkinlik Mekanı</p>
           <form action="">
             {locations.map((item: EventProps) => (
               <>
@@ -29,7 +30,7 @@ const Filter = ({ locations }: { locations: EventProps[] }) => {
           </form>
         </div>
         <div>
-          <p className="mb-2">Etkinlik Tarihi</p>
+          <p className="mb-2 font-bold">Etkinlik Tarihi</p>
           <form action="">
             <input
               type="checkbox"

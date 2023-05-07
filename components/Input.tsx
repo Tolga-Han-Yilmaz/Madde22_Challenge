@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface InputProps {
@@ -57,7 +58,7 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         peer-placeholder-shown:translate-y-0 
         peer-focus:scale-75
         peer-focus:-translate-y-3
-      "><img src='./images/Union.png'/></label>
+      "><Image src='./images/Union.png' alt='union' /></label>
     </div>
   )
 }
